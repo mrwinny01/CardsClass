@@ -1,15 +1,13 @@
 public class Cards {
 
     private String name;
-    private int speed;
-    private String firstName;
-    private String lastName;
-    private int id;
+    public String firstName;
+    public String lastName;
+    public int id;
 
 
     public Cards() {
         this.name = name;
-        this.speed = speed;
     }
 
     public String getName() {
@@ -18,14 +16,6 @@ public class Cards {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getSpeed() {
-        return speed;
-    }
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
     }
 
     public int getId() {
@@ -79,8 +69,7 @@ public class Cards {
 
     @Override
     public String toString() {
-        return "Cards [ Name cards = " + name
-                + ", Speed cards = " + speed + "]";
+        return "Cards [ Name cards = " + name + "]";
     }
 }
 
