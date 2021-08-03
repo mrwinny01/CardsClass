@@ -1,16 +1,18 @@
-public class Bicycle extends Cards{
+package jwd;
+
+public class Cards {
 
     private String name;
     private String firstName;
     private String lastName;
     private int id;
-    private int cost;
-    private int slip;
-    private int strength;
 
-    public Bicycle () {
+
+    public Cards(String name, String firstName, String lastName, int id) {
         this.name = name;
-        this.cost = cost;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.id = id;
     }
 
     public String getName() {
@@ -47,36 +49,40 @@ public class Bicycle extends Cards{
 
     @Override
     public boolean equals(Object obj) {
+
         if (obj == this) {
             return true;
         }
-        if (obj == null || obj.getClass() != this.getClass()) {
-            return false;
+
+        if (obj == null || obj.getClass() != this.getClass() || obj != this) {
+           return false;
         }
+
         Cards guest = (Cards) obj;
+
         return id == guest.id
                 && (firstName == guest.firstName
-                || (firstName != null &&firstName.equals(guest.getFirstName())))        && (lastName == guest.lastName
-                || (lastName != null && lastName .equals(guest.getLastName())
-        ));
+                || (firstName != null &&firstName.equals(guest.getFirstName())))
+                && (lastName == guest.lastName
+                || (lastName != null && lastName .equals(guest.getLastName())));
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
+
         result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
-        result = prime * result + id; result = prime * result +
-                ((lastName == null) ? 0 : lastName.hashCode()); return result;
+        result = prime * result + id;
+        result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
+        return result;
     }
 
     @Override
     public String toString() {
         return "Cards [ Name cards = " + name
-                + "Cost cards" + cost + "]";
-    }
-
-    public void costCalculation (int slip, int strength){
-        cost = slip * strength;
+                + "firstName" + firstName
+                + "lastName = " + lastName
+                + "id = " + id + "]";
     }
 }
