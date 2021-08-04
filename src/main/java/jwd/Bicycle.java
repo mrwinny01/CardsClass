@@ -40,8 +40,8 @@ public class Bicycle extends Cards{
     @Override
     public String toString() {
         return "Cards [ Name cards = " + name
-                + "costCards = " + costCard + "]";
+                + "costCards = " + costCard
+                + "rarity" + rarity
+                + "lotSize" + lotSize +"]";
     }
-
-
 }

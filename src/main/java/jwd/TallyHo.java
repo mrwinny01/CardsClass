@@ -5,9 +5,11 @@ public class TallyHo extends Cards {
     private String name;
     private int numberOfPack;
 
-    public TallyHo(String name, String firstName, String lastName, int id) {
+    public TallyHo(String name, String firstName,
+                   String lastName, int id, int numberOfPack) {
         super(name, firstName, lastName, id);
         this.name = name;
+        this.numberOfPack = numberOfPack;
     }
 
     public String getName() {

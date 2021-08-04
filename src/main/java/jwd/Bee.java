@@ -8,7 +8,8 @@ public class Bee extends Cards{
     private int massCard;
 
 
-    public Bee(String name, String firstName, String lastName, int id, int florishSpeed, int slipCard, int massCard ){
+    public Bee(String name, String firstName, String lastName,
+               int id, int florishSpeed, int slipCard, int massCard ){
         super(name, firstName, lastName, id);
         this.name = name;
         this.florishSpeed = florishSpeed;
