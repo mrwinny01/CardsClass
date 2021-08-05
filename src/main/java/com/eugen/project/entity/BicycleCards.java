@@ -2,48 +2,66 @@ package com.eugen.project.entity;
 
 import com.eugen.project.entity.Cards;
 
+import java.util.Objects;
+
 public class BicycleCards extends Cards {
 
-    private String cardsName;
-    private int costCard;
-    private int rarity;
-    private int packagesNumber;
+    private int cardsCost;
+    private int rareness;
+    private int numOfPackages;
 
     public BicycleCards (String cardsName, String firstName, String lastName,
-                    int costCard, int rarity, int packagesNumber) {
+                    int cardsCost, int rareness, int numOfPackages) {
         super(cardsName, firstName, lastName);
-        this.cardsName = cardsName;
-        this.costCard = costCard;
-        this.rarity = rarity;
-        this.packagesNumber = packagesNumber;
+        this.cardsCost = cardsCost;
+        this.rareness = rareness;
+        this.numOfPackages = numOfPackages;
     }
 
-    public String getCardsName() {
-        return cardsName;
+    public int getCardsCost() {
+        return cardsCost;
     }
 
-    public void setCardsName(String name) {
-        this.cardsName = cardsName;
+    public void setCardsCost(int cardsCost) {
+        this.cardsCost = cardsCost;
     }
 
-    public void calculateCostCard(int rarity, int packagesNumber){
-        this.costCard = rarity / packagesNumber;
+    public int getRareness() {
+        return rareness;
     }
+
+    public void setRareness(int rareness) {
+        this.rareness = rareness;
+    }
+
+    public int getNumOfPackages() {
+        return numOfPackages;
+    }
+
+    public void setNumOfPackages(int numOfPackages) {
+        this.numOfPackages = numOfPackages;
+    }
+
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        BicycleCards that = (BicycleCards) o;
+        return cardsCost == that.cardsCost && rareness == that.rareness && numOfPackages == that.numOfPackages;
     }
 
     @Override
     public int hashCode() {
-      return super.hashCode();
+        return Objects.hash(super.hashCode(), cardsCost, rareness, numOfPackages);
     }
 
     @Override
     public String toString() {
-        return "Cards [ cardsName = " + cardsName
-                + "costCards = " + costCard
-                + "rarity = " + rarity
-                + "packagesNumber = " + packagesNumber +"]";
+        return super.toString() +
+                "\ncardsCost=" + cardsCost +
+                ", rareness=" + rareness +
+                ", numOfPackages=" + numOfPackages +
+                '}';
     }
 }

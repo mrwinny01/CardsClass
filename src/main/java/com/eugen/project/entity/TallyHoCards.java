@@ -6,22 +6,20 @@ import java.util.Objects;
 
 public class TallyHoCards extends Cards {
 
-    private String cardsName;
     private int numberOfPacks;
 
-    public TallyHoCards (String CardsName, String firstName,
+    public TallyHoCards (String cardsName, String firstName,
                    String lastName, int numberOfPacks) {
-        super(CardsName, firstName, lastName);
-        this.cardsName = CardsName;
+        super(cardsName, firstName, lastName);
         this.numberOfPacks = numberOfPacks;
     }
 
-    public String getCardsName() {
-        return cardsName;
+    public int getNumberOfPacks() {
+        return numberOfPacks;
     }
 
-    public void setCardsName(String name) {
-        this.cardsName = cardsName;
+    public void setNumberOfPacks(int numberOfPacks) {
+        this.numberOfPacks = numberOfPacks;
     }
 
     @Override
@@ -30,16 +28,18 @@ public class TallyHoCards extends Cards {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         TallyHoCards that = (TallyHoCards) o;
-        return numberOfPacks == that.numberOfPacks && Objects.equals(cardsName, that.cardsName);
+        return numberOfPacks == that.numberOfPacks;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), cardsName, numberOfPacks);
+        return Objects.hash(super.hashCode(), numberOfPacks);
     }
 
     @Override
     public String toString() {
-        return super.toString() + "\nCards [ cardsName = " + cardsName + "]";
+        return super.toString()  +
+                "\n, numberOfPacks=" + numberOfPacks +
+                '}';
     }
 }
