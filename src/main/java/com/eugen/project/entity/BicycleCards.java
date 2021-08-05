@@ -59,7 +59,7 @@ public class BicycleCards extends Cards {
     @Override
     public String toString() {
         return super.toString() +
-                "\ncardsCost=" + cardsCost +
+                "\n, cardsCost=" + cardsCost +
                 ", rareness=" + rareness +
                 ", numOfPackages=" + numOfPackages +
                 '}';
