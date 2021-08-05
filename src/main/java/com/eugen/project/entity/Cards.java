@@ -1,5 +1,7 @@
 package com.eugen.project.entity;
 
+import java.util.Objects;
+
 public class Cards {
 
     private String cardsName;
@@ -12,6 +14,7 @@ public class Cards {
         this.cardsName = cardsName;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.id = ++id;
     }
 
     public String getCardsName () {
@@ -47,41 +50,27 @@ public class Cards {
     }
 
     @Override
-    public boolean equals(Object obj) {
-
-        if (obj == this) {
-            return true;
-        }
-
-        if (obj == null || obj.getClass() != this.getClass() || obj != this) {
-           return false;
-        }
-
-        Cards guest = (Cards) obj;
-
-        return id == guest.id
-                && (firstName == guest.firstName
-                || (firstName != null &&firstName.equals(guest.getFirstName())))
-                && (lastName == guest.lastName
-                || (lastName != null && lastName .equals(guest.getLastName())));
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cards cards = (Cards) o;
+        return id == cards.id && Objects.equals(cardsName, cards.cardsName)
+                && Objects.equals(firstName, cards.firstName)
+                && Objects.equals(lastName, cards.lastName);
     }
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-
-        result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
-        result = prime * result + id;
-        result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
-        return result;
+        return Objects.hash(cardsName, firstName, lastName, id);
     }
 
     @Override
     public String toString() {
-        return "Cards [ cardsName = " + cardsName
-                + "firstName" + firstName
-                + "lastName = " + lastName
-                + "id = " + id + "]";
+        return "Cards{" +
+                "cardsName='" + cardsName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", id=" + id +
+                '}';
     }
 }
