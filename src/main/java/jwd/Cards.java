@@ -2,25 +2,24 @@ package jwd;
 
 public class Cards {
 
-    private String name;
+    private String cardsName;
     private String firstName;
     private String lastName;
     private int id;
 
 
-    public Cards(String name, String firstName, String lastName, int id) {
-        this.name = name;
+    public Cards(String cardsName, String firstName, String lastName) {
+        this.cardsName = cardsName;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getCardsName () {
+        return cardsName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCardsName (String name) {
+        this.cardsName = cardsName;
     }
 
     public int getId() {
@@ -80,7 +79,7 @@ public class Cards {
 
     @Override
     public String toString() {
-        return "Cards [ Name cards = " + name
+        return "Cards [ cardsName = " + cardsName
                 + "firstName" + firstName
                 + "lastName = " + lastName
                 + "id = " + id + "]";
