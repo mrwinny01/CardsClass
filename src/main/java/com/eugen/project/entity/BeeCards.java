@@ -1,6 +1,8 @@
-package jwd;
+package com.eugen.project.entity;
 
-public class BeeCards extends Cards{
+import com.eugen.project.entity.Cards;
+
+public class BeeCards extends Cards {
 
     private String cardsName;
     private int florishSpeed;

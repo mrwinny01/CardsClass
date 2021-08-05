@@ -1,4 +1,6 @@
-package jwd;
+package com.eugen.project.entity;
+
+import com.eugen.project.entity.Cards;
 
 public class TallyHoCards extends Cards {
 
