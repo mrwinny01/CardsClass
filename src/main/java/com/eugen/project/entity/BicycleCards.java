@@ -48,7 +48,9 @@ public class BicycleCards extends Cards {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         BicycleCards that = (BicycleCards) o;
-        return cardsCost == that.cardsCost && rareness == that.rareness && numOfPackages == that.numOfPackages;
+        return cardsCost == that.cardsCost
+                && rareness == that.rareness
+                && numOfPackages == that.numOfPackages;
     }
 
     @Override

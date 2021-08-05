@@ -49,7 +49,9 @@ public class BeeCards extends Cards {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         BeeCards beeCards = (BeeCards) o;
-        return flourishSpeed == beeCards.flourishSpeed && cardsSlip == beeCards.cardsSlip && сardsWeight == beeCards.сardsWeight;
+        return flourishSpeed == beeCards.flourishSpeed
+                && cardsSlip == beeCards.cardsSlip
+                && сardsWeight == beeCards.сardsWeight;
     }
 
     @Override
