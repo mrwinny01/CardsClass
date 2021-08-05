@@ -17,20 +17,12 @@ public class Cards {
         this.id = ++id;
     }
 
-    public String getCardsName () {
+    public String getCardsName() {
         return cardsName;
     }
 
-    public void setCardsName (String name) {
+    public void setCardsName(String cardsName) {
         this.cardsName = cardsName;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getFirstName() {
@@ -47,6 +39,14 @@ public class Cards {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
