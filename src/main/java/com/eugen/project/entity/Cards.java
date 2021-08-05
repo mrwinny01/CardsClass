@@ -1,6 +1,7 @@
 package com.eugen.project.entity;
 
 import java.util.Objects;
+import java.util.Random;
 
 public class Cards {
 
@@ -14,7 +15,7 @@ public class Cards {
         this.cardsName = cardsName;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.id = ++id;
+        this.id = new Random().nextInt();
     }
 
     public String getCardsName() {
