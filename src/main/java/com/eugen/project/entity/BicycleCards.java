@@ -1,6 +1,8 @@
-package jwd;
+package com.eugen.project.entity;
 
-public class BicycleCards extends Cards{
+import com.eugen.project.entity.Cards;
+
+public class BicycleCards extends Cards {
 
     private String cardsName;
     private int costCard;

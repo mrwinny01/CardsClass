@@ -1,4 +1,4 @@
-package jwd;
+package com.eugen.project.entity;
 
 public class Cards {
 
